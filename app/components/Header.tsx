@@ -1,48 +1,66 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
-    <header className="bg-white shadow-sm dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800">
+    <header className="bg-white shadow-sm dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 fixed top-0 left-0 right-0 z-50">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <span className="text-2xl font-bold text-zinc-900 dark:text-white">
-                YourLogo
+                Good Morning
               </span>
             </Link>
           </div>
 
-          {/* Navigation Links */}
           <div className="hidden md:flex md:items-center md:space-x-8">
             <Link
               href="/"
-              className="text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white transition-colors duration-200"
+              className={`transition-colors duration-200 ${
+                pathname === "/"
+                  ? "text-blue-600 dark:text-blue-400 font-semibold"
+                  : "text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              }`}
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white transition-colors duration-200"
+              className={`transition-colors duration-200 ${
+                pathname === "/about"
+                  ? "text-blue-600 dark:text-blue-400 font-semibold"
+                  : "text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              }`}
             >
               About
             </Link>
             <Link
               href="/services"
-              className="text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white transition-colors duration-200"
+              className={`transition-colors duration-200 ${
+                pathname === "/services"
+                  ? "text-blue-600 dark:text-blue-400 font-semibold"
+                  : "text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              }`}
             >
               Services
             </Link>
             <Link
               href="/contact"
-              className="text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white transition-colors duration-200"
+              className={`transition-colors duration-200 ${
+                pathname === "/contact"
+                  ? "text-blue-600 dark:text-blue-400 font-semibold"
+                  : "text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+              }`}
             >
               Contact
             </Link>
           </div>
 
-          {/* CTA Button */}
           <div className="hidden md:flex md:items-center">
             <Link
               href="/get-started"
@@ -79,4 +97,3 @@ export default function Header() {
     </header>
   );
 }
-
