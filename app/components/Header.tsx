@@ -61,12 +61,18 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className="hidden md:flex md:items-center">
+          <div className="hidden md:flex md:items-center md:space-x-4">
             <Link
-              href="/get-started"
+              href="/login"
+              className="rounded-full border-2 border-zinc-900 dark:border-white px-6 py-2 text-sm font-medium text-zinc-900 dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors duration-200"
+            >
+              Login
+            </Link>
+            <Link
+              href="/signup"
               className="rounded-full bg-zinc-900 px-6 py-2 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200 transition-colors duration-200"
             >
-              Get Started
+              Sign Up
             </Link>
           </div>
 

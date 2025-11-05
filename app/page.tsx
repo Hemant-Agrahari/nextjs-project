@@ -18,7 +18,7 @@ export default function Home() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
-                href="/get-started"
+                href="/signup"
                 className="rounded-full bg-blue-600 px-8 py-4 text-lg font-semibold text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Get Started Free
@@ -130,7 +130,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
-              href="/get-started"
+              href="/signup"
               className="rounded-full bg-white px-8 py-4 text-lg font-semibold text-blue-600 hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               Start Free Trial
